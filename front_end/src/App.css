@@ -1,0 +1,47 @@
+
+.App{
+  padding-left: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  display: flex;
+  background-color:  rgb(204, 205, 255);
+
+}
+
+.List-Container {
+  background-color:  rgb(188, 189, 255);;
+  font-weight: 600;
+  border-color: black;
+  border: 2px;
+  margin-left: 20px;
+  margin-right: 20px
+
+}
+.sublist{
+  background-color:  rgb(204, 205, 255);
+  width:100%;
+  border-color: black;
+  border: 2px;
+  font-size: small;
+  font-weight: 500;
+  color: brown;
+  margin-right: 20px;
+  display:inline-table;
+}
+.btn-api{
+  border-radius: 3px;
+  height: auto;
+  border-width: 2px;
+  border-style:solid;
+  border-color: aliceblue;
+  align-self: center;
+  background-color:  rgb(173, 174, 252);;
+  font-size: large;
+  padding: 8px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 2px;
+  
+}
+
