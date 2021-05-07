@@ -5,22 +5,60 @@
   margin-right: 0;
   margin-top: 0;
   display: flex;
-  background-color:  rgb(204, 205, 255);
+  background-color:  rgb(219, 220, 255);
+}
+.input{
+    display: flex;
+    object-fit: contain;
+    width: 95%;
+    font-size: small;
+    margin-left: 15px;
 
 }
+/* .List{
+    margin-right: 50px;
+} */
+.card{
+    display: block;
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    text-indent: 15px;
+    margin-right: 100px;
 
+}
+SearchIcon{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    align-self: flex-end;
+    vertical-align: middle;
+    margin-left: 0px;
+    position: absolute;
+}
+h4{
+    font-style: oblique;
+    margin-bottom: 0;
+}
+.example{
+    color:rgb(57, 0, 80);
+    font-size: small;
+    margin-top: 0%;
+    margin-bottom: 0px;
+
+}
 .List-Container {
-  background-color:  rgb(188, 189, 255);;
+  background-color:  rgb(227, 228, 255);;
   font-weight: 600;
   border-color: black;
   border: 2px;
-  margin-left: 20px;
-  margin-right: 20px
+  margin-left: 30px;
+  margin-right: 20px;
+  border-radius: 2px;
 
 }
 .sublist{
-  background-color:  rgb(204, 205, 255);
-  width:100%;
+    background-color:  rgb(227, 228, 255);;
+    width:100%;
   border-color: black;
   border: 2px;
   font-size: small;

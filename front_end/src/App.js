@@ -4,95 +4,80 @@ import {BrowserRouter  as Router, Route, Switch} from 'react-router-dom';
 import grey from '@material-ui/core/colors/grey';
 import Input from '@material-ui/core/Input';
 import Collapsible from 'react-collapsible';
-
-
-
+import Button from '@material-ui/core/Button'
+import SearchIcon from '@material-ui/icons/Search';
+import Header from './header';
 function App() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
+  const[word,setWord]=useState("");
 
-  // Note: the empty deps array [] means
-  // this useEffect will run once
-  // similar to componentDidMount()
+ 
   useEffect(() => {
-    // fetch("https://google-books.p.rapidapi.com/volumes?key=AIzaSyAOsteuaW5ifVvA_RkLXh0mYs6GLAD6ykc", {
-    //   "method": "GET",
-    //   "headers": {
-    //     "x-rapidapi-key": "bd7cf329bemshae8e6053840605ep166442jsnc60488059d95",
-    //     "x-rapidapi-host": "google-books.p.rapidapi.com"
-    //   }
-    // })
-    //  .then(res => res.json())
-    //   .then(
-    //     (result) => {
-    //       // setIsLoaded(true);
-    //       // setItems(result);
-    //       console.log(result.items)
-    //       setItems(result.items);
-    //     },
-    //     // Note: it's important to handle errors here
-    //     // instead of a catch() block so that we don't swallow
-    //     // exceptions from actual bugs in components.
-    //     (error) => {
-    //       setIsLoaded(true);
-    //       setError(error);
-    //       console.log(error)
-    //     }
-    //   )
-  }, [])
-
-  
-    return (
-      <div>
-        <center>
-        <button className="btn-api" onClick={()=>{
-          fetch("https://google-books.p.rapidapi.com/volumes?key=AIzaSyAOsteuaW5ifVvA_RkLXh0mYs6GLAD6ykc", {
+      }, [])
+   const url= `https://mashape-community-urban-dictionary.p.rapidapi.com/define?term=`+word
+   console.log(url)
+   function Search(){
+    fetch(`https://mashape-community-urban-dictionary.p.rapidapi.com/define?term=`+word, {
             "method": "GET",
             "headers": {
-              "x-rapidapi-key": "bd7cf329bemshae8e6053840605ep166442jsnc60488059d95",
-              "x-rapidapi-host": "google-books.p.rapidapi.com"
+                "x-rapidapi-key": "bd7cf329bemshae8e6053840605ep166442jsnc60488059d95",
+                "x-rapidapi-host": "mashape-community-urban-dictionary.p.rapidapi.com"
             }
-          })
-           .then(res => res.json())
-            .then(
-              
-              (result) => {
-                // setIsLoaded(true);
-                // setItems(result);
-                console.log(result.items)
-                setItems(result.items);
-              },
-              // Note: it's important to handle errors here
-              // instead of a catch() block so that we don't swallow
-              // exceptions from actual bugs in components.
-              (error) => {
-                setIsLoaded(true);
-                setError(error);
-                console.log(error)
-              }
-            )
+        })
+        .then(response =>response.json())
+        .then(response=>{
+            console.log(response.list)
+            setItems(response.list)
+        })
+        .catch(err => {
+            console.error(err);
+        });
+   }
+    return (
+      <div>
+          <Header/>
+
+           <Input className="input" id="search" color="black" placeholder="Type the word to search"
+           onKeyDown={e=>{
+
+                if (e. key === 'Enter') {
+                        Search()                    
+                }
+           }}
+           autoFocus="True"
+           onChange={(e) => {
+           e.preventDefault();
+           console.log(e.target.value)
+           setWord(e.target.value)
+           
+           }}>
+            </Input>
+
+        <SearchIcon
+        type="Button"
+        id="search" fontSize="medium" variant="contained" color="black " 
+        onClick={()=>{
+         Search();  
         }}>
           Click Here
-        </button>
-        </center>
- 
-        <ul className="List-Container">
+        </SearchIcon>
+        
+      <ul className="List">
        {
          items.map((product) => {
-          return <li key={product.id}>
-            <li>{product.volumeInfo.title}</li>
-              <div  className="sublist">
-              <ol>
-              {product.volumeInfo.description?<li>{product.volumeInfo.description}</li>:<li>description cannot be found</li>}
-              <li><a href={product.selfLink}> Click here for complete Info</a></li>
-              <li><a href={product.previewLink}> Click here for previewLink </a></li>
-                {/* <img src={product.volumeInfo.imageLinks.thumbnail} alt={product.volumeInfo.title}></img> */}
-            </ol>
-            </div>
+          return <li key={product.defid}>
+            <div className="card">
+                <p>{product.definition}</p>
+            <h4> Example </h4>
+            <p className="example">
+            {product.example}
+            </p>            
             <br></br>
+            
+            </div>  
           </li>
-         
            })
        }
        </ul>
