@@ -51,8 +51,7 @@ function App() {
            e.preventDefault();
            console.log(e.target.value)
            setWord(e.target.value)
-           
-           }}>
+        }}>
             </Input>
 
         <SearchIcon

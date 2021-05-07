@@ -26,6 +26,9 @@
     margin-left: 10px;
     text-indent: 15px;
     margin-right: 100px;
+    
+    transition: width 2s;
+    
 
 }
 SearchIcon{
@@ -66,6 +69,7 @@ h4{
   color: brown;
   margin-right: 20px;
   display:inline-table;
+
 }
 .btn-api{
   border-radius: 3px;

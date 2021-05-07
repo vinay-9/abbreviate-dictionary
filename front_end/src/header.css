@@ -8,6 +8,7 @@
     color: aliceblue;
     background-color: rgb(68, 0, 88);
     margin-right: 10px;
+    display: flex;
 }
 hr{
     margin-top: 2px;
@@ -27,6 +28,7 @@ img{
 .navbar{
     margin-top: 0;
     position:absolute;
-    margin-left: 500px
-   
+    margin-left: 33%;
+    display: flex;
+    
 }
