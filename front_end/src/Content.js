@@ -1,5 +1,5 @@
 import React, { useState, useEffect, ReactDOM } from 'react';
-import './App.css';
+import './Content.css';
 import Input from '@material-ui/core/Input';
 import SearchIcon from '@material-ui/icons/Search';
 import Header from './header';

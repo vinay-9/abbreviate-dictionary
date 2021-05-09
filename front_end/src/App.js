@@ -10,7 +10,7 @@ import Header from './header';
 import ThumbDownOutlinedIcon from '@material-ui/icons/ThumbDownOutlined';
 import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
 import Content from './Content';
-import Login from './login'
+import Login from './Login'
 export default function App() {
   useEffect(() => {
       }, [])
@@ -19,7 +19,7 @@ export default function App() {
 return (
 <Router> 
     <Switch>
-        <Route path="/app">
+        <Route path="/">
             <Content/>
          </Route>
 
