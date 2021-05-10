@@ -73,6 +73,7 @@ export default function Content(){
                                 {product.example}
                             </p> 
                             <div className="thumbs_data"> 
+                                    
                                     <ThumbUpAltOutlinedIcon className="thumbs"></ThumbUpAltOutlinedIcon> {product.thumbs_up}
                                     <ThumbDownOutlinedIcon className="thumbs"></ThumbDownOutlinedIcon> {product.thumbs_down}
                                 </div>           

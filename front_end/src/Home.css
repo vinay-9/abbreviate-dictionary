@@ -2,7 +2,7 @@
     display:flex;
     width: 100%;
     text-align:center;
-    font-size:large;
+    font-size:95%;
     height: 200px;
     align-content: center;
     border-radius: 10px;
@@ -20,7 +20,7 @@ video{
     background-color: rgb(101, 0, 121);
     margin-top: 0px;
     width: 10%;
-    height: 40px;
+    height: 20%;
     padding: 0px;
     align-self: center;
     font-size: larger   ;

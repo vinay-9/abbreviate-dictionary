@@ -3,10 +3,7 @@ const serveIndex = require('serve-index');
 
 const app = express();
 
-app.use((req, res, next) => {
-  console.log('Time: ', Date.now());
-  next();
-});
+  
 
 app.use('/request-type', (req, res, next) => {
   console.log('Request type: ', req.method);

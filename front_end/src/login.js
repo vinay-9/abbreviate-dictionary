@@ -47,6 +47,7 @@ import React ,{ useState} from 'react'
 import {Link } from 'react-router-dom';
 import "./Login.css";
 import urban_dictionary from './urban_dictionary.png'
+import Firebase from './firebase/index'
 
 function Login() {
     const [email, setemail] = useState('');
@@ -55,6 +56,8 @@ function Login() {
     const signIn= e=>{
         e.preventDefault();
         //firebase stuff
+        Firebase.doSignInWithEmailAndPassword(email, password);
+
     }
 
     const register= e=>{
@@ -66,6 +69,8 @@ function Login() {
         //     console.log(auth);
         // })
         // .catch(error=> console.log(error.message))
+        Firebase.doCreateUserWithEmailAndPassword(email,password)
+
     }
     return (
         <div class="body">
