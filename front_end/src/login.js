@@ -70,7 +70,7 @@ function Login() {
     return (
         <div class="body">
         <div className="login__body">
-        <Link to="/">
+        <Link to="/search">
             <img 
             className="login__logo"
             src ={urban_dictionary}

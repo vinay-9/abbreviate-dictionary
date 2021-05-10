@@ -1,12 +1,18 @@
 import React from 'react'
 import "./header.css";
 import urban_dictionary from './urban_dictionary.png'
-
-
+import {BrowserRouter  as Router, Route, Switch, Link} from 'react-router-dom';
+import LockOpenIcon from '@material-ui/icons/LockOpen';
+import purple from '@material-ui/core/colors/purple';
 
 function Header() {
+    const color = purple[50];
+
     return (
         <div className="container">
+            <Link to="/login">
+                <LockOpenIcon style={{ color: color }}></LockOpenIcon>
+            </Link>
             <center>
              <h1 className="navbar">Welcome to Abbreviate dictionary!</h1>
              </center>

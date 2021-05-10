@@ -109,3 +109,15 @@
 font-size: small;
 }
 
+input{
+    background-color: rgb(230, 177, 255);
+    border-radius: 2px;
+    border:0px
+}
+
+input::after{
+    border: 1px;
+    border-width: 1px;
+    border-style: ridge;
+}
+

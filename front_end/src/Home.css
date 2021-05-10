@@ -1,0 +1,38 @@
+.container_button{
+    display:flex;
+    width: 100%;
+    text-align:center;
+    font-size:large;
+    height: 200px;
+    align-content: center;
+    border-radius: 10px;
+    flex-direction: column;
+    padding-top: 0.2%;
+    margin-top: auto;
+}
+
+video{
+    width: 100%;
+    display: flex;
+}
+
+.buttons{
+    background-color: rgb(101, 0, 121);
+    margin-top: 0px;
+    width: 10%;
+    height: 40px;
+    padding: 0px;
+    align-self: center;
+    font-size: larger   ;
+    border-radius: 8px;
+    border: 1px;
+    border-style: ridge;
+    border-color: rgb(139, 0, 182);
+    font-family:cursive;
+    color: rgb(242, 213, 255);
+    font-weight: 600;
+    text-decoration: none;
+    
+    
+    
+}

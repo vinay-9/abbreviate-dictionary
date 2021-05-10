@@ -10,7 +10,8 @@ import Header from './header';
 import ThumbDownOutlinedIcon from '@material-ui/icons/ThumbDownOutlined';
 import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined';
 import Content from './Content';
-import Login from './Login'
+import Login from './Login';
+import Home from "./Home"
 export default function App() {
   useEffect(() => {
       }, [])
@@ -20,6 +21,9 @@ return (
 <Router> 
     <Switch>
         <Route exact path="/">
+            <Home/>
+         </Route>
+         <Route exact path="/search">
             <Content/>
          </Route>
 
