@@ -25,9 +25,12 @@ const config = {
  
   const doCreateUserWithEmailAndPassword = (email, password) =>
    { auth.createUserWithEmailAndPassword(email, password).
-    then(res=>console.log("user created"))
+    then(res=>
+        {console.log("user created")
+        return <Redirect exact to='/'/>
+    })
     .catch(res=>{
-        return <Redirect to='/'  />
+        return <Redirect exact to='/'/>
 
     });
 
