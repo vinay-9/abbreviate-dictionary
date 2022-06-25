@@ -8,7 +8,8 @@ app.get('/api', (req, res, next) => {
   
   res.send('Node.js Search and Filter');
 });
-app.get('/*', function (req, res) {
+app.use(express.static("front_end/build"))
+app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, './front_end/build', 'index.html'));
 });
   
