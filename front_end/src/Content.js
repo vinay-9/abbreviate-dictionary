@@ -12,7 +12,7 @@ export default function Content(){
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
     const[word,setWord]=useState("");
-
+//commenting the code
     useEffect(() => {
      
     }, [])
@@ -35,6 +35,23 @@ export default function Content(){
         .catch(err => {
             console.error(err);
         });
+        // var axios = require("axios").default;
+
+// var options = {
+//   method: 'GET',
+//   url: 'https://mashape-community-urban-dictionary.p.rapidapi.com/define',
+//   params: {term: 'wat'},
+//   headers: {
+//     'x-rapidapi-key': 'bd7cf329bemshae8e6053840605ep166442jsnc60488059d95',
+//     'x-rapidapi-host': 'mashape-community-urban-dictionary.p.rapidapi.com'
+//   }
+// };
+
+// axios.request(options).then(function (response) {
+// 	console.log(response.data);
+// }).catch(function (error) {
+// 	console.error(error);
+// });
    }
 
     return(
@@ -43,7 +60,7 @@ export default function Content(){
                 <Input className="input" id="search" color="black" placeholder="Type the word to search"
                 onKeyDown={e=>{
 
-                        if (e. key === 'Enter') {
+                        if (e.key === 'Enter') {
                                 Search()                    
                         }
                 }}
